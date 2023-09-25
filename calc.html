@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div>
+    <input type="text" id="screen" readonly>
+    <input type="text" id="reve" readonly>
+    <br><br>
+    <button onclick="clen()">AC</button>
+    <button onclick="show()">+/=</button>
+    <button onclick="show()">%</button>
+    <button onclick="show('/')">/</button>
+    <br><br>
+    <button onclick="show(9)">9</button>
+    <button onclick="show(8)">8</button>
+    <button onclick="show(7)">7</button>
+    <button onclick="show('*')">*</button>
+    <br><br>
+    <button onclick="show(6)">6</button>
+    <button onclick="show(5)">5</button>
+    <button onclick="show(4)">4</button>
+    <button onclick="show('+')">+</button>
+    <br><br>
+    <button onclick="show(3)">3</button>
+    <button onclick="show(2)">2</button>
+    <button onclick="show(1)">1</button>
+    <button onclick="show('-')">-</button>
+    <br><br>
+    <button onclick="show(0)">0</button>
+    <button onclick="show('.')">.</button>
+    <button onclick="ans()">=</button>
+    
+
+    </div>
+
+
+
+    <script>
+        function show(x){
+        document.getElementById("screen").value+=x
+        }
+        function clen(){
+            document.getElementById("screen").value=''
+            document.getElementById("reve").value =''
+        }
+function ans(){
+    document.getElementById("reve").value = eval(document.getElementById("screen").value)
+}
+// function clen(){
+//     document.getElementByI("reve").valve =''
+// }
+    </script>
+</body>
+</html>
